@@ -3,8 +3,14 @@
 - Created react app using vite
 - Configured TailwindCSS
 - Header component
+- Routing of App
 - Login Form
 - Sig Up Form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploying our app to production
+
 
 # Features
 - Login/Sign up
