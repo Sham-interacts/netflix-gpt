@@ -2,13 +2,19 @@ import React from "react";
 import { Header } from "./Header";
 import { useState, useRef } from "react";
 import { checkValidData } from "../utils/validate";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+
+  const dispatch = useDispatch();
 
   const fullname = useRef(null);
   const email = useRef(null);
@@ -34,6 +40,27 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          updateProfile(user, {
+            displayName: fullname.current.value,
+            photoURL: USER_AVATAR,
+          })
+            .then(() => {
+              // Profile updated!
+              // Dispatching action from updated user so that we dont get NULL for displayName and photoURL i.e why auth.currentUser
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                }),
+              );
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error);
+            });
           console.log(user);
         })
         .catch((error) => {
