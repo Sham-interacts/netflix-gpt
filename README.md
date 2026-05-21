@@ -18,7 +18,17 @@
 - BugFix: Sign up user displayName and profile picture update
 - BugFix: If the user is not logged in Redirect /browse to login Page and vice-versa
 - Unsubscribed to the onAuthStateChanged callback
-- Add hardcoded values to constants
+- Add hardcoded values to constants file.
+- Register TMDB API & Create an app & get Access token
+- Get Data from TMDB now playing movies list API
+- Custom hook for Now Playing Movies
+- Create movieSlice
+- Update Store with movies Data
+- Planning for MainContainer & Secondary Container
+- Fetch data for trailer Video
+- Update Store with Trailer Video data
+- Embeded the youtube video and make it autoplay and mute
+- Tailwind classes to make main container look nice.
 
 # Features
 - Login/Sign up
@@ -28,7 +38,7 @@
     - Header
     - Main movie
         - Trailer in BG
-        - title & desc
+            s- title & desc
         - Movie suggestions
             - movieList * N
 - NetflixGPT
