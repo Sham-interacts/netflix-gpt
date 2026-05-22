@@ -34,6 +34,8 @@
 - Add TMDB Image CDN URL to constants.
 - Made the Browse page look nice with TailwindCSS
 - Created usePopularMovies Custom hook
+- Created useTopRatedMovies custom hook
+- Ceated useUpcomingMovies custom hook
 
 
 # Features
