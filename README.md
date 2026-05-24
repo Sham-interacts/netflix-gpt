@@ -15,6 +15,7 @@
 - Created Redux store with userSlice
 - Implemented Sign out
 - Updated Profile
+
 - BugFix: Sign up user displayName and profile picture update
 - BugFix: If the user is not logged in Redirect /browse to login Page and vice-versa
 - Unsubscribed to the onAuthStateChanged callback
@@ -35,7 +36,12 @@
 - Made the Browse page look nice with TailwindCSS
 - Created usePopularMovies Custom hook
 - Created useTopRatedMovies custom hook
-- Ceated useUpcomingMovies custom hook
+- Created useUpcomingMovies custom hook
+
+- GPT Search Page
+- GPT Search Bar
+
+
 
 
 # Features
