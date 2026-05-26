@@ -43,6 +43,7 @@
 - Get Open AI APi Key
 - Gpt Search API call
 - fetched gptSearchMoviesResults
+- gptMovieSuggestions
 
 
 
