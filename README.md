@@ -40,6 +40,9 @@
 
 - GPT Search Page
 - GPT Search Bar
+- Get Open AI APi Key
+- Gpt Search API call
+- fetched gptSearchMoviesResults
 
 
 
