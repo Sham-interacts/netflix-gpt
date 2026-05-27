@@ -44,6 +44,8 @@
 - Gpt Search API call
 - fetched gptSearchMoviesResults
 - gptMovieSuggestions
+- Securing API keys
+- Memoization
 
 
 
