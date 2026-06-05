@@ -57,14 +57,14 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="absolute w-screen px-6 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44" src={LOGO} alt="Netflix-logo"></img>
+    <div className="absolute w-screen px-8 py-2  bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Netflix-logo"></img>
       {user && (
-        <div className="flex p-4">
+        <div className="flex justify-between p-4">
           <div className="bg-purple-800 text-white py-4 px-4 my-2 rounded-lg font-bold">
             <button onClick={handleGPTSearchClick}>{showGptSearch? "Home" : "GPT Search"}</button>
           </div>
-          <img alt="usericon" className="w-12 h-12 m-2" src={user?.photoURL} />
+          <img alt="usericon" className="hidden md:block w-12 h-12 m-2" src={user?.photoURL} />
           <button className="font-bold text-white" onClick={handleSignOut}>
             (Sign Out)
           </button>

@@ -1,13 +1,16 @@
+import { FaInfoCircle } from "react-icons/fa";
 
 const VideoTitle = ({ title, overview }) => {
   return (
     <div className="w-screen aspect-video pt-[20%] px-12 absolute text-white bg-gradient-to-r from-black">
-      <h1 className="text-5xl font-bold">{title}</h1>
-      <p className="py-6 text-lg w-1/4">{overview}</p>
+      <h1 className="text-3xl md:text-5xl font-bold">{title}</h1>
+      <p className="hidden md:inline-block  py-6 text-lg w-1/4">{overview}</p>
       <div className="">
-        <button className="text-black bg-white p-4 px-16 text-xl rounded-lg hover:opacity-80">
-         Play</button>
-        <button className="mx-2 text-white bg-gray-500 p-4 px-16 text-xl rounded-lg hover:opacity-80">More Info</button>
+        <button className="text-black bg-white mt-2 py-1 md:py-4 px-6 md:px-16 text-xl rounded-lg hover:opacity-80">
+          &#9658; Play </button>
+        <button className="hidden md:inline-block mx-2 text-white bg-gray-500 p-4 px-16 text-xl rounded-lg hover:opacity-80">
+          More Info
+        </button>
       </div>
     </div>
   );

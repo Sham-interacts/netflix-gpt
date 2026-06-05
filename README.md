@@ -46,6 +46,7 @@
 - gptMovieSuggestions
 - Securing API keys
 - Memoization
+- Made our site Responsive
 
 
 
